@@ -3,11 +3,12 @@
    "how to change link color." */
 
 body {
-  background-color: #436a7b;
-  background-image: url('../images/bg_diamond.png');
+  background-color: #574250;
+  background-image: url('../images/bg_purplePaper.png');
 	background-position: top;
   font-size: 18px;
   font-family: Georgia, "Times New Roman", serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
   margin: 0;
 }
 
@@ -16,7 +17,7 @@ p {
 }
 
 hr {
-  border: solid #c7b591;
+  border: solid #997e9c;
   border-width: 2px 0 0 0;
 }
 
@@ -53,12 +54,12 @@ img {
 }
 
 a:hover { 
-  background-color: #fff6e6;
+  background-color: #e5ddff;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: Tahoma, Geneva, sans-serif;
-  color: #34436f;
+  color: #453b63;
 }
 
 /*#CONTAINER is the rectangle that contains everything but the background!*/
@@ -66,9 +67,9 @@ h1, h2, h3, h4, h5 {
   margin: 3em auto;
   width: 90%;
 	max-width: 700px;
-	background-color: #f1e3c9;
+	background-color: #bba8bd;
   color: #151515; 
-  outline-color: #a9a9a9;
+  outline-color: #a19cb1;
   outline-style: ridge;
   outline-width: 4px;
   outline-offset: 0;
@@ -81,9 +82,9 @@ h1, h2, h3, h4, h5 {
 
 /*HEADER STYLE*/
 #header {
-  background-color: #384879;
+  background-color: #453b63;
   padding: 0 5%;
-  border-color: #a9a9a9;
+  border-color: #a19cb1;
   border-style: ridge;
   border-width: 0 0 4px 0;
 }

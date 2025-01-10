@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Blog's Homepage</title>
+    <title>izzy kestrel</title>
     <!-- The description is not directly visible on the page. But it can show up in certain places like search engines. Probably unnecessary for most pages in your blog. -->
     <meta name="description" content="Zonelets is a scrappy blogging workflow designed to encourage creative fun on the internet!">
     <!-- This specifies the favicon (little icon on the browser tab) -->
@@ -18,10 +18,10 @@
     <div id="content">    
       
       
-      <h1>Welcome to my blog!</h1>
+      <h3>you have reached the personal website of</h3>
+      <h1>isabelle adena kestrel</h1>
       
-      <p>I hope you enjoy your time here!</p>
-      
+      <p>i can't come to the phone right now (probably tying up the line playing <span id="game"></span>), please leave a message after the tone</p>
       
       <div id="recentpostlistdiv"></div>
       
@@ -30,5 +30,19 @@
     </div> <!-- end of div id="container" -->    
   <!-- Here's the link to our JavaScript! -->
   <script src="./script.js"></script>
+  <script src="./footer.js"></script>
+  <script>
+    const games = [
+      "Quake III Arena",
+      "Ragnarok Online",
+      "Kingdom of Loathing",
+      "Space Cowboy Online",
+      "Gex Quest",
+      "Starcraft",
+      "Infiniminer",
+    ]
+    
+    document.getElementById('game').textContent = games[Math.floor(Math.random()*games.length)]
+  </script>
   </body>
 </html>

@@ -1,20 +1,4 @@
-/*Welcome to the script file! Your 1st time here, you should update
-  the BASIC INFO section to include your name and website/social 
-  media link (if desired). Most of the time, you will just come
-  here to update the POSTS ARRAY. However, you can also edit or
-  add your own scripts to do whatever you like!*/
-
-//TABLE OF CONTENTS
-  // 1. Basic Info
-  // 2. Posts Array
-  // 3. Creating HTML Sections to Be Inserted (Header, Footer, etc)
-  // 4. Inserting the Sections Into our Actual HTML Pages
-
-//-----------------------------
-
-//==[ 1. BASIC INFO ]==
-
-let blogName = "izzy's post hole";
+let blogName = "izzy kestrel";
 let authorName = "izzy kestrel";
 let authorLink = ""; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
 
@@ -60,13 +44,10 @@ if ( url.includes("posts/") ) {
 }
 
 //Generate the Header HTML, a series of list items containing links.
-let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
-'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
-'<li><a href="' + relativePath + '/about.html">About</a></li> </ul>';
-
-//Generate the Footer HTML, which uses the variables defined in the BASIC INFO section above to list info about the site.
-//Note: feel free to remove the references to Zonelets and Neocities! Just be careful not to delete any necessary HTML closing tags or other syntax.
-let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
+let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">home</a></li>' + 
+'<li><a href="' + relativePath + '/projects.html">projects</a></li>' +
+'<li><a href="' + relativePath + '/blog.html">blog</a></li>' +
+'<li><a href="' + relativePath + '/about.html">about</a></li> </ul>';
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
@@ -161,7 +142,7 @@ for ( let i = 0; i < numberOfRecentPosts; i++ ) {
   then we'll add a link to the archive so readers can find the rest of
   your wonderful posts and be filled with knowledge.*/
 if ( postsArray.length > recentPostsCutoff ) {
-  recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/archive.html>\u00BB more posts</a></li></ul>';
+  recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/blog.html>\u00BB more posts</a></li></ul>';
 } else {
   recentPostListHTML += "</ul>";
 }
@@ -188,15 +169,6 @@ if ( postsArray.length < 2 ) {
   nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a> | <a href="' + relativePath + '/'+ prevlink +'">Previous Post \u00BB</a>';
 }
 
-//-----------------------------
-
-//==[ 4. INSERTING THE SECTIONS INTO OUR ACTUAL HTML PAGES ]==
-
-/*Here we check if each relevant div exists. If so, we inject the correct HTML!
-  NOTE: All of these sections are optional to use on any given page. For example, if there's 
-  one particular blog post where we don't want the footer to appear, 
-  we simply don't put a <div id="footer"> on that page.*/
-
 if (document.getElementById("nextprev")) {
   document.getElementById("nextprev").innerHTML = nextprevHTML;
 }
@@ -217,9 +189,6 @@ if (document.getElementById("postTitleH1")) {
 }
 if (document.getElementById("postDate")) {
   document.getElementById("postDate").innerHTML = niceDate;
-}
-if (document.getElementById("footer")) {
-  document.getElementById("footer").innerHTML = footerHTML;
 }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
